@@ -1,26 +1,20 @@
-import React from 'react';
-import logo from './logo.svg';
+import React,{usestate} from 'react';
+import {Message} from './Message.js';
 import './App.css';
-
-function App() {
+export default function App() {
+  
+  let [count,setcount]=usestate(1);
+  let [Day,setDay]=usestate(false)
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className= {`box ${ Day ? 'Daylight' : ''}`}>
+    
+      <h1> Good { Day ?'Morning' : 'Nite'}</h1>
+
+      <Message counter={count}/>
+      <br/>
+      <button onClick= {()=> setcount(count+1)}>Update the Number </button>
+      <button onClick= {()=> setDay(!Day)}> Change Day </button>
+   
     </div>
   );
 }
-
-export default App;
