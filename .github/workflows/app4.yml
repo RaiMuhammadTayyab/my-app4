@@ -28,7 +28,7 @@ jobs:
 
     # Runs a set of commands using the runners shell
     - name: yarn action
-      uses: borales/actions-yarn@v2.1.0|
+      uses: Borales/actions-yarn@v2.1.0
       with:
        cmd: install
     - name: building yarn
