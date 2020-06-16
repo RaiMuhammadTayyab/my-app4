@@ -31,12 +31,15 @@ jobs:
       uses: Borales/actions-yarn@v2.1.0
       with:
        cmd: install
+       
     - name: building yarn
       run: yarn build
+      
     - name: installing on surge
-      run: npm install --g surge
+      run: npm install --global surge
+      
     - name: deploying on surge
       run: surge ./build http://pink-red.surge.sh/ --token ${{secrets.SURGE_TOKEN}} 
-       
+      
        
        - 
