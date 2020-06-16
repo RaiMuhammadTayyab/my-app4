@@ -1,19 +1,19 @@
-import React,{usestate} from 'react';
+import React, {useState} from 'react';
 import {Message} from './Message.js';
 import './App.css';
 export default function App() {
   
-  let [count,setcount]=usestate(1);
-  let [Day,setDay]=usestate(false)
+  let [count,setcount]= useState(1);
+  let [day, setDay]= useState(false)
   return (
-    <div className= {`box ${ Day ? 'Daylight' : ''}`}>
+    <div className= {`box ${day ? 'daylight' : ''}`}>
     
-      <h1> Good { Day ?'Morning' : 'Nite'}</h1>
+      <h1> Good { day ? 'Morning' : 'Nite'}</h1>
 
       <Message counter={count}/>
       <br/>
-      <button onClick= {()=> setcount(count+1)}>Update the Number </button>
-      <button onClick= {()=> setDay(!Day)}> Change Day </button>
+      <button onClick= {() => setcount(count+1)}>Update the Number </button>
+      <button onClick= {() => setDay(!day)}> Change Day </button>
    
     </div>
   );
