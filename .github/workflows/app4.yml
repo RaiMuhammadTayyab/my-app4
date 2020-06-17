@@ -28,7 +28,7 @@ jobs:
     - name: yarn action
       uses: Borales/actions-yarn@v2.1.0
       with:
-       cmd: Run
+       cmd: add
        
     - name: building yarn
       run: yarn build
