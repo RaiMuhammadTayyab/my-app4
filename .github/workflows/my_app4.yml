@@ -40,5 +40,5 @@ jobs:
 
     - name: install surge
       run: npm install --g surge
-    - name:deploying surge
+    - name: deploying surge
       run: surge ./build pink-red.surge.sh --token ${{ secrets.SURGE_TOKEN}}
