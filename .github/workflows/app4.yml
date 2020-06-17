@@ -1,6 +1,8 @@
 M# This is a basic workflow to help you get started with Actions
 
-name: app4 
+
+- name: app4 
+
 on:
   push:
     branches: [ master ]
